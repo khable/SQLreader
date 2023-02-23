@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace SQLReader
+namespace occ.dmr.dataConnector
 {
     public class Program
     {
@@ -14,7 +14,7 @@ namespace SQLReader
         public static void Main(string[] args)
         {
             IConfigurationBuilder builder = new ConfigurationBuilder();
-            builder.AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), "occ.CUtool.Addin.json"));
+            builder.AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), "occ.dmr.json"));
             configurations = builder.Build();
         }
 
@@ -42,8 +42,21 @@ namespace SQLReader
                         TagList = row["TagList"],
                         GlobalClass = row["GlobalClass"],
                         SourceApplication = row["SourceApplication"],
-                        Validated = (bool)row["Validated"]
+                        Validated = (bool)row["Validated"],
+                        Attributes = new List<DMRGlobalAttribute>
+                        {
+                            new DMRGlobalAttribute()
+                            {
+                                Name = row["Name"],
+                                UDA = row["UDA"],
+                                Value = row["Value"],
+                                IsPrimary = row["IsPrimary"],
+                                Uom = row["Uom"],
+                                Datatype = row["Datatype"]
+                            }
+                        }
                     });
+
                 }
             }
 

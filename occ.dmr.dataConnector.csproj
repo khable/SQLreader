@@ -7,8 +7,8 @@
     <ProjectGuid>{5DDF76FB-DFD9-4261-A20D-8352A4ACB206}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SQLreader</RootNamespace>
-    <AssemblyName>SQLreader</AssemblyName>
+    <RootNamespace>occ.dmr.dataConnector</RootNamespace>
+    <AssemblyName>occ.dmr.dataConnector</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -119,7 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="occ.CUtool.Addin.json" />
+    <None Include="occ.dmr.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿namespace SQLReader
+﻿namespace occ.dmr.dataConnector
 {
     public struct DMRGlobalAttribute
     {

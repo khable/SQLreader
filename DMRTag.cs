@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SQLReader
+namespace occ.dmr.dataConnector
 {
     public struct DMRTag
     {
